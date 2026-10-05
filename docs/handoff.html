@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Handoff: AI/DS/Stat Career Data</title>
+<style>
+:root{--bg:#fafaf8;--fg:#1d1d1b;--mut:#6b6b66;--line:#ddd9d0;--acc:#2a5d9f;--card:#fff;--ok:#2e7d32;--warn:#b26a00}
+@media(prefers-color-scheme:dark){:root{--bg:#161616;--fg:#eee;--mut:#9a9a94;--line:#333;--acc:#7fb0f0;--card:#1f1f1f;--ok:#7bc47f;--warn:#e0a040}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.6 system-ui,"Noto Sans Thai",sans-serif}
+main{max-width:1000px;margin:0 auto;padding:16px}
+h1{font-size:22px;margin:8px 0}h2{font-size:17px;margin:28px 0 8px;border-bottom:1px solid var(--line);padding-bottom:4px}
+.bar{position:sticky;top:0;background:var(--bg);padding:8px 0;display:flex;gap:8px;flex-wrap:wrap;align-items:center;border-bottom:1px solid var(--line);z-index:5}
+button{background:var(--acc);color:#fff;border:0;border-radius:6px;padding:6px 12px;cursor:pointer;font:inherit}
+button.sec{background:transparent;color:var(--acc);border:1px solid var(--acc)}
+[contenteditable]{outline:none;border-radius:4px;padding:2px 4px}[contenteditable]:focus{background:color-mix(in srgb,var(--acc) 12%,transparent)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 14px;margin:8px 0}
+table{width:100%;border-collapse:collapse;font-size:13px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:5px 7px;text-align:left;vertical-align:top;min-width:90px}th{background:color-mix(in srgb,var(--acc) 10%,transparent)}
+.mut{color:var(--mut);font-size:13px}small.s{font-size:12px}
+a{color:var(--acc);word-break:break-all}
+</style>
+</head>
+<body><main>
+<div class="bar">
+ <strong>Handoff</strong><span class="mut" id="st">แก้ไขได้ทุกช่อง · บันทึกอัตโนมัติในเบราว์เซอร์</span>
+ <span style="flex:1"></span>
+ <button class="sec" onclick="addRow()">+ เพิ่มชุดข้อมูล</button>
+ <button class="sec" onclick="exportMd()">ส่งออก .md</button>
+ <button onclick="exportHtml()">บันทึกไฟล์ HTML</button>
+ <button class="sec" onclick="if(confirm('ล้างการแก้ไขที่บันทึกไว้?')){localStorage.removeItem(K);location.reload()}">รีเซ็ต</button>
+</div>
+
+<h1 contenteditable data-k="title">Handoff: ข้อมูลตลาดงาน AI / Data Science / Statistics</h1>
+<p class="mut">สร้างเมื่อ 2026-10-05 · เอกสารนี้ส่งต่อให้ AI/คนถัดไป — แก้ข้อความหรือตารางได้โดยตรง แล้วกด "บันทึกไฟล์ HTML" เพื่อส่งต่อฉบับที่แก้แล้ว</p>
+
+<h2>1. เป้าหมาย</h2>
+<div class="card" contenteditable data-k="goal">
+สร้างภาพรวมตลาดงานสาย AI, Data Science, Statistics จากแหล่ง open data ครอบคลุม: (1) จำนวนผู้สำเร็จการศึกษา (2) การจ้างงาน วุฒิ เงินเดือนเริ่มต้น ประเทศ (3) บริษัท (4) ทักษะในใบสมัคร (5) การแบ่งระดับ เริ่มต้น/ปานกลาง/เชี่ยวชาญ — แล้วนำไปวิเคราะห์ต่อ
+</div>
+
+<h2>2. ไฟล์ที่ส่งมอบ (โฟลเดอร์ <code>datasets/</code>)</h2>
+<div class="card" contenteditable data-k="files">
+01_graduates.md · 02_employment_salary.md · 03_companies.md · 04_skills_in_job_ads.md · 05_career_levels.md — แต่ละไฟล์มีคำอธิบาย license ลิงก์ และข้อจำกัด
+</div>
+
+<h2>3. รายการชุดข้อมูล (แก้ไขได้)</h2>
+<p class="mut">สถานะ: ✅ ตรวจลิงก์แล้ว 5 ต.ค. 2026 · ⚠️ ยังไม่ยืนยัน (บอทถูกบล็อก/URL ตรงไม่ทราบ) — ผู้รับงานต้องตรวจก่อนใช้</p>
+<table id="tbl"><thead><tr><th>หัวข้อ</th><th>ชุดข้อมูล</th><th>License</th><th>ลิงก์</th><th>สถานะ</th><th>หมายเหตุ</th><th></th></tr></thead><tbody></tbody></table>
+
+<h2>4. ข้อเท็จจริงที่ยืนยันจากแหล่ง</h2>
+<div class="card" contenteditable data-k="facts">
+<ul>
+<li>BLS (พ.ค. 2024): Data scientist median $112,590 (P10 $63,650, P90 $194,410); Statistician median $103,300; จ้างงาน data scientist คาดโต 34% ช่วง 2024–2034</li>
+<li>ai-jobs.net: ~6,165 รายงาน (ตามสำเนาที่พบ), ระดับ EN/MI/SE/EX, CC0</li>
+<li>Epoch AI: โมเดล ~21,600 (notable ~7,400), CC BY 4.0</li>
+<li>Companies House: ~3.4M บริษัทใน 4 ไฟล์ zip, OGL v3.0</li>
+<li>MHESI/data.go.th: ผู้สำเร็จการศึกษาปี 2561–2566 จำแนก 10 กลุ่ม ISCED, CC Attribution</li>
+<li>O*NET: v31.0, 1,016 อาชีพ, CC BY 4.0</li>
+</ul>
+</div>
+
+<h2>5. เกณฑ์ระดับ (ร่าง)</h2>
+<div class="card" contenteditable data-k="levels">
+<b>เริ่มต้น</b>: 0–2 ปี, ป.ตรี, EN, Job Zone 4 · <b>ปานกลาง</b>: 3–5 ปี, ป.ตรี–โท, MI, Zone 4–5 · <b>เชี่ยวชาญ</b>: 6+ ปี, ป.โท–เอก, SE/EX, Zone 5. เกณฑ์ปีเป็นข้อเสนอ ไม่ใช่มาตรฐานทางการ
+</div>
+
+<h2>6. ข้อจำกัดและความเสี่ยง</h2>
+<div class="card" contenteditable data-k="risks">
+<ul>
+<li>ข้อมูลไทยระดับสาขา AI/DS แยกย่อยหายาก; เงินเดือนไทยแบบเปิดแทบไม่มี → ใช้ ai-jobs.net/Kaggle/SO เป็น proxy</li>
+<li>ไม่มีตัวเลข "เงินเดือนเริ่มต้น" ทางการ ใช้ P10/P25 ของ OEWS หรือ level=EN เป็นตัวแทน</li>
+<li>Kaggle LinkedIn postings: license รายงานไม่ตรงกัน และมาจาก scraping — ยืนยันก่อนใช้</li>
+<li>ข้อมูลที่ไม่ได้รวม (ไม่ใช่ open): Lightcast, Glassdoor, LinkedIn Talent Insights, Crunchbase</li>
+<li>ตัวเลข DS median ของ Stack Overflow (~$60k) มาจากบล็อกบุคคลที่สาม ยังไม่ได้ตรวจกับข้อมูลดิบ</li>
+</ul>
+</div>
+
+<h2>7. งานต่อไป (ให้ AI ตัวถัดไป)</h2>
+<div class="card" contenteditable data-k="next">
+<ol>
+<li>ดาวน์โหลดไฟล์ที่ ✅ และตรวจ license ของรายการ ⚠️</li>
+<li>IPEDS: กรอง CIP 30.7001, 27.0501, 11.0102 รวมรายปีตามระดับ</li>
+<li>OEWS: ดึงแถว 15-2051, 15-2041 ทำตาราง employment/wage percentile</li>
+<li>ai-jobs.net: group by experience_level × company_location (รวมประเทศไทย)</li>
+<li>O*NET Technology Skills → ตารางทักษะ × ระดับ</li>
+<li>Companies House: กรอง SIC เป้าหมาย; DBD: ตารางจำนวนนิติบุคคลตามประเภทธุรกิจ</li>
+<li>รวมเป็นรายงานเดียว + dashboard</li>
+</ol>
+</div>
+
+<h2>8. บันทึกเพิ่มเติม</h2>
+<div class="card" contenteditable data-k="notes" style="min-height:70px">พิมพ์บันทึกที่นี่…</div>
+</main>
+
+<script>
+const K='handoff-v1';
+const DEF=[
+["1 ผู้จบ (ไทย)","MHESI ผู้สำเร็จการศึกษา 10 กลุ่ม ISCED 2561–2566","CC Attribution","https://data.go.th/en/dataset/education-creative1","✅","ระดับกลุ่มสาขา ไม่แยก AI/DS"],
+["1 ผู้จบ (ไทย)","MHESI Stat Graduate portal","ตรวจเอง","https://info.mhesi.go.th/stat_graduate.php","✅","ละเอียดกว่า ตรวจ license"],
+["1 ผู้จบ (US)","IPEDS Completions C2023_A / C2024_A","Public domain (US gov)","https://nces.ed.gov/ipeds/datacenter/data/C2024_A.zip","✅","กรอง CIP 30.7001/27.0501/11.0102"],
+["1 ผู้จบ (EU)","Eurostat educ_uoe_grad02, isoc_sks_itspe","CC BY 4.0","https://ec.europa.eu/eurostat/databrowser/view/educ_uoe_grad02","⚠️","ไม่มี code DS โดยตรง"],
+["2 จ้างงาน/เงินเดือน","BLS OEWS national May 2024/2025","Public domain (US gov)","https://www.bls.gov/oes/tables.htm","⚠️","zip ถูก 403 กับ curl เปิดผ่านเบราว์เซอร์"],
+["2 เงินเดือน (global)","ai-jobs.net Salaries","CC0","https://ai-jobs.net/salaries/download/","⚠️","redirect ไป foorilla.com หาปุ่ม CSV"],
+["2 เงินเดือน/ทักษะ","Stack Overflow Developer Survey","ODbL 1.0","https://survey.stackoverflow.co/","✅","กดดาวน์โหลด CSV จากหน้าเว็บ"],
+["2 ไทยแรงงาน","NSO สำรวจภาวะการทำงานของประชากร","ตรวจเอง","https://www.nso.go.th","⚠️","microdata ต้องขออนุญาต"],
+["3 บริษัท (ไทย)","DBD นิติบุคคลตามประเภทธุรกิจ","ตรวจเอง","https://opendata.dbd.go.th/en/dataset/dataset_12_01","✅","ข้อมูลสรุป ไม่ใช่รายชื่อ"],
+["3 บริษัท (UK)","Companies House Free Company Data","OGL v3.0","https://download.companieshouse.gov.uk/en_output.html","✅","กรอง SIC 62/63/72"],
+["3 องค์กร AI","Epoch AI Notable AI Models","CC BY 4.0","https://epoch.ai/data/notable_ai_models.csv","✅","ผู้พัฒนาโมเดล"],
+["4 ทักษะ","O*NET Database 30.0 (มี 31.0 ที่ onetcenter.org/database.html)","CC BY 4.0","https://www.onetcenter.org/dl_files/database/db_30_0_text.zip","✅","Technology Skills, Job Zones"],
+["4 ทักษะ","ESCO skills/occupations CSV","ตรวจเงื่อนไข ESCO","https://esco.ec.europa.eu/en/use-esco/download","⚠️","ต้องกรอก form"],
+["4 ประกาศงาน","Kaggle LinkedIn Job Postings (arshkon) / DS Job Postings (asaniczka)","ไม่ตรงกัน ตรวจเอง","https://www.kaggle.com/","⚠️","URL ตรงไม่ได้ยืนยัน, scraping"],
+["5 ระดับ","EDISON CF-DS Release 4","ตรวจที่ Zenodo","https://zenodo.org/records/7506445","⚠️","กรอบสมรรถนะ"],
+["5 ระดับ (ไทย)","TPQI มาตรฐานอาชีพ Digital/Data Science","ตรวจเอง","https://www.tpqi.go.th","⚠️","ระดับ 6 ต้อง ≥5 ปี"]
+];
+let rows=DEF;
+const tb=document.querySelector('#tbl tbody'),st=document.getElementById('st');
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;')}
+function render(){
+ tb.innerHTML=rows.map((r,i)=>'<tr>'+r.map((c,j)=>'<td contenteditable data-r="'+i+'" data-c="'+j+'">'+esc(c)+'</td>').join('')+'<td><button class="sec" onclick="delRow('+i+')">ลบ</button></td></tr>').join('');
+}
+function addRow(){rows.push(["","","","https://","⚠️",""]);render();save()}
+function delRow(i){rows.splice(i,1);render();save()}
+function save(){
+ const o={rows,txt:{}};
+ document.querySelectorAll('[data-k]').forEach(e=>o.txt[e.dataset.k]=e.innerHTML);
+ try{localStorage.setItem(K,JSON.stringify(o));st.textContent='บันทึกแล้ว '+new Date().toLocaleTimeString()}catch(e){st.textContent='บันทึกในเบราว์เซอร์ไม่ได้ — ใช้ปุ่มบันทึกไฟล์'}
+}
+try{const o=JSON.parse(localStorage.getItem(K)||'null');if(o){rows=o.rows;for(const k in o.txt){const e=document.querySelector('[data-k="'+k+'"]');if(e)e.innerHTML=o.txt[k]}}}catch(e){}
+render();
+document.addEventListener('input',e=>{const t=e.target;if(t.dataset&&t.dataset.r!==undefined)rows[t.dataset.r][t.dataset.c]=t.innerText;save()});
+function dl(name,text,type){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text],{type}));a.download=name;a.click()}
+function exportHtml(){save();
+ const html='<!doctype html>\n'+document.documentElement.outerHTML;
+ dl('handoff.html',html,'text/html')}
+function exportMd(){
+ let m='# '+document.querySelector('[data-k=title]').innerText+'\n\n';
+ document.querySelectorAll('h2').forEach(h=>{
+  m+='## '+h.innerText+'\n\n';
+  const n=h.nextElementSibling.tagName==='P'?h.nextElementSibling.nextElementSibling:h.nextElementSibling;
+  if(n.tagName==='TABLE'){m+='| '+['หัวข้อ','ชุดข้อมูล','License','ลิงก์','สถานะ','หมายเหตุ'].join(' | ')+' |\n|'+'---|'.repeat(6)+'\n'+rows.map(r=>'| '+r.map(c=>String(c).replace(/\|/g,'/')).join(' | ')+' |').join('\n')+'\n\n'}
+  else m+=n.innerText.trim()+'\n\n';
+ });
+ dl('handoff.md',m,'text/markdown')}
+</script>
+</body></html>
