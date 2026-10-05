@@ -1,0 +1,18 @@
+body{margin:0;background:#f6f7f9;font-family:system-ui,"Noto Sans Thai",sans-serif;color:#1d1d1b}
+.page{max-width:1280px;margin:0 auto;padding:12px 16px}
+h2{font-size:20px;margin:6px 0}
+.banner{background:#fff3cd;border:1px solid #e0c36a;border-radius:6px;padding:6px 10px;font-size:13px;margin-bottom:8px}
+.filters{display:flex;gap:16px;flex-wrap:wrap;background:#fff;border:1px solid #e1e4e8;border-radius:8px;padding:10px 14px}
+.fcol{min-width:220px;flex:1}.fcol.wide{flex:2;min-width:300px}.fcol label{font-size:12px;color:#666}
+.chiprow{margin:8px 0;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.chip{background:#e07b39;color:#fff;border-radius:12px;padding:2px 10px;font-size:12px;margin-right:6px}
+.hint{color:#888;font-size:12px}
+button{border:1px solid #2a5d9f;background:#fff;color:#2a5d9f;border-radius:6px;padding:3px 10px;cursor:pointer}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(480px,1fr));gap:12px}
+.card{background:#fff;border:1px solid #e1e4e8;border-radius:8px;padding:8px 12px;margin-top:12px}
+.card h4{margin:2px 0 4px;font-size:14px}.note{font-size:11px;color:#777}
+.kpis{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+.kpi{background:#fff;border:1px solid #e1e4e8;border-radius:8px;padding:8px 14px;min-width:160px;flex:1}
+.kv{font-size:22px;font-weight:600}.kk{font-size:12px;color:#666}
+table{width:100%;border-collapse:collapse;font-size:13px}th,td{border-bottom:1px solid #eee;padding:4px 8px;text-align:left}
+@media(max-width:600px){.grid2{grid-template-columns:1fr}}

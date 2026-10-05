@@ -1,0 +1,102 @@
+program_id,course,credits,skill
+P01,วิชาบังคับ: GenAI/LLM 1,3,GenAI/LLM
+P01,วิชาบังคับ: SQL 2,2,SQL
+P01,วิชาบังคับ: Computer Vision 2,4,Computer Vision
+P01,วิชาบังคับ: NLP 1,3,NLP
+P01,วิชาบังคับ: MLOps 1,3,MLOps
+P01,วิชาบังคับ: Machine Learning 2,3,Machine Learning
+P02,วิชาบังคับ: Deep Learning 2,3,Deep Learning
+P02,วิชาบังคับ: GenAI/LLM 2,3,GenAI/LLM
+P02,วิชาบังคับ: Computer Vision 2,3,Computer Vision
+P02,วิชาบังคับ: SQL 1,3,SQL
+P02,วิชาบังคับ: Statistics 2,2,Statistics
+P02,วิชาบังคับ: Python 1,3,Python
+P02,วิชาบังคับ: NLP 1,3,NLP
+P02,วิชาบังคับ: MLOps 2,3,MLOps
+P02,วิชาบังคับ: Regression 1,4,Regression
+P03,วิชาบังคับ: GenAI/LLM 1,3,GenAI/LLM
+P03,วิชาบังคับ: Cloud 1,3,Cloud
+P03,วิชาบังคับ: Docker 1,3,Docker
+P03,วิชาบังคับ: MLOps 2,3,MLOps
+P03,วิชาบังคับ: Python 2,3,Python
+P03,วิชาบังคับ: Statistics 2,2,Statistics
+P03,วิชาบังคับ: Machine Learning 1,2,Machine Learning
+P04,วิชาบังคับ: MLOps 1,3,MLOps
+P04,วิชาบังคับ: Cloud 2,4,Cloud
+P04,วิชาบังคับ: Python 2,3,Python
+P04,วิชาบังคับ: Deep Learning 1,3,Deep Learning
+P04,วิชาบังคับ: Machine Learning 2,3,Machine Learning
+P04,วิชาบังคับ: Statistics 1,2,Statistics
+P04,วิชาบังคับ: NLP 2,3,NLP
+P04,วิชาบังคับ: GenAI/LLM 1,3,GenAI/LLM
+P04,วิชาบังคับ: Power BI 2,2,Power BI
+P05,วิชาบังคับ: Cloud 2,3,Cloud
+P05,วิชาบังคับ: Power BI 2,4,Power BI
+P05,วิชาบังคับ: Data Visualization 1,2,Data Visualization
+P05,วิชาบังคับ: Statistics 2,2,Statistics
+P05,วิชาบังคับ: SQL 1,3,SQL
+P05,วิชาบังคับ: A/B Testing 2,4,A/B Testing
+P05,วิชาบังคับ: Machine Learning 1,4,Machine Learning
+P05,วิชาบังคับ: Python 1,3,Python
+P05,วิชาบังคับ: Spark 2,4,Spark
+P06,วิชาบังคับ: Python 2,3,Python
+P06,วิชาบังคับ: Tableau 1,4,Tableau
+P06,วิชาบังคับ: Regression 2,2,Regression
+P06,วิชาบังคับ: Cloud 2,2,Cloud
+P06,วิชาบังคับ: Statistics 2,4,Statistics
+P06,วิชาบังคับ: R 1,3,R
+P06,วิชาบังคับ: SQL 1,3,SQL
+P07,วิชาบังคับ: Tableau 2,4,Tableau
+P07,วิชาบังคับ: Cloud 1,3,Cloud
+P07,วิชาบังคับ: Machine Learning 2,3,Machine Learning
+P07,วิชาบังคับ: SQL 1,3,SQL
+P07,วิชาบังคับ: R 2,3,R
+P07,วิชาบังคับ: Statistics 2,4,Statistics
+P07,วิชาบังคับ: Power BI 2,2,Power BI
+P07,วิชาบังคับ: A/B Testing 2,2,A/B Testing
+P07,วิชาบังคับ: Spark 1,3,Spark
+P07,วิชาบังคับ: GenAI/LLM 1,2,GenAI/LLM
+P07,วิชาบังคับ: Bayesian 1,4,Bayesian
+P08,วิชาบังคับ: Data Visualization 1,4,Data Visualization
+P08,วิชาบังคับ: R 2,4,R
+P08,วิชาบังคับ: Cloud 2,3,Cloud
+P08,วิชาบังคับ: Power BI 2,3,Power BI
+P08,วิชาบังคับ: A/B Testing 2,3,A/B Testing
+P08,วิชาบังคับ: SQL 2,3,SQL
+P08,วิชาบังคับ: Machine Learning 2,3,Machine Learning
+P08,วิชาบังคับ: Python 2,3,Python
+P08,วิชาบังคับ: GenAI/LLM 1,4,GenAI/LLM
+P08,วิชาบังคับ: Tableau 2,3,Tableau
+P09,วิชาบังคับ: Spark 2,2,Spark
+P09,วิชาบังคับ: R 2,3,R
+P09,วิชาบังคับ: Power BI 2,2,Power BI
+P09,วิชาบังคับ: Statistics 2,4,Statistics
+P09,วิชาบังคับ: Data Visualization 2,2,Data Visualization
+P09,วิชาบังคับ: Tableau 2,4,Tableau
+P09,วิชาบังคับ: Machine Learning 1,4,Machine Learning
+P09,วิชาบังคับ: Python 1,3,Python
+P09,วิชาบังคับ: A/B Testing 1,3,A/B Testing
+P09,วิชาบังคับ: Bayesian 2,3,Bayesian
+P09,วิชาบังคับ: Time Series 2,4,Time Series
+P10,วิชาบังคับ: Statistics 1,3,Statistics
+P10,วิชาบังคับ: Data Visualization 1,2,Data Visualization
+P10,วิชาบังคับ: Time Series 2,2,Time Series
+P10,วิชาบังคับ: R 2,4,R
+P10,วิชาบังคับ: Python 2,3,Python
+P10,วิชาบังคับ: Bayesian 2,3,Bayesian
+P10,วิชาบังคับ: A/B Testing 1,2,A/B Testing
+P10,วิชาบังคับ: Airflow 1,3,Airflow
+P10,วิชาบังคับ: Tableau 2,2,Tableau
+P11,วิชาบังคับ: Statistics 1,3,Statistics
+P11,วิชาบังคับ: A/B Testing 1,2,A/B Testing
+P11,วิชาบังคับ: Bayesian 2,3,Bayesian
+P11,วิชาบังคับ: R 2,2,R
+P11,วิชาบังคับ: SQL 1,4,SQL
+P11,วิชาบังคับ: Spark 1,3,Spark
+P12,วิชาบังคับ: Statistics 2,2,Statistics
+P12,วิชาบังคับ: R 1,3,R
+P12,วิชาบังคับ: Data Visualization 2,3,Data Visualization
+P12,วิชาบังคับ: SQL 2,3,SQL
+P12,วิชาบังคับ: Python 1,3,Python
+P12,วิชาบังคับ: Airflow 1,3,Airflow
+P12,วิชาบังคับ: Machine Learning 1,3,Machine Learning
