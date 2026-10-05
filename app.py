@@ -2,7 +2,7 @@
 from dash import ALL, Dash, Input, Output, State, ctx, dcc, html
 
 from dashboard import data
-from dashboard.config import FIELDS, SAMPLE_BANNER
+from dashboard.config import FIELDS, REAL_NOTE, SAMPLE_BANNER
 from dashboard.filters import SEL_KEYS, describe
 from dashboard.tabs import tab1, tab2, tab3
 from dashboard.ui import CLICK_MAP
@@ -11,12 +11,12 @@ app = Dash(__name__, suppress_callback_exceptions=True, title="AI/DS/Stat Workfo
 server = app.server
 
 d = data.load()
-countries = sorted(d.postings.country.unique())
+countries = d.postings.country.value_counts().index.tolist()
 y_lo, y_hi = int(d.graduates.year.min()), int(d.graduates.year.max())
 
 app.layout = html.Div([
     html.H2("Dashboard: อุปทาน–อุปสงค์กำลังคน AI / Data Science / Statistics"),
-    html.Div(SAMPLE_BANNER, className="banner") if data.IS_SAMPLE else html.Div(),
+    html.Div(SAMPLE_BANNER if data.IS_SAMPLE else REAL_NOTE, className="banner" if data.IS_SAMPLE else "note-bar"),
     html.Div([
         html.Div([html.Label("สาย"), dcc.Dropdown(id="f-field", multi=True, options=[{"label": v, "value": k} for k, v in FIELDS.items()],
                                                   value=list(FIELDS), clearable=False)], className="fcol"),

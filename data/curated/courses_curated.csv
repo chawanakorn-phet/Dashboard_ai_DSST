@@ -1,0 +1,123 @@
+institution,cip,award_level,code,course,credits,source_url,note
+Portland State University,30.7001,5,Mth 231,Data Science Seminar,2,https://pdx-mobile.smartcatalogiq.com/2023-2024/bulletin/college-of-liberal-arts-and-sciences/mathematics-and-statistics/undergraduate-programs/data-science-bs,2023-24 bulletin
+Portland State University,30.7001,5,Mth 251,Calculus I,4,https://pdx-mobile.smartcatalogiq.com/2023-2024/bulletin/college-of-liberal-arts-and-sciences/mathematics-and-statistics/undergraduate-programs/data-science-bs,2023-24 bulletin
+Portland State University,30.7001,5,Mth 252,Calculus II,4,https://pdx-mobile.smartcatalogiq.com/2023-2024/bulletin/college-of-liberal-arts-and-sciences/mathematics-and-statistics/undergraduate-programs/data-science-bs,2023-24 bulletin
+Portland State University,30.7001,5,Mth 253,Calculus III,4,https://pdx-mobile.smartcatalogiq.com/2023-2024/bulletin/college-of-liberal-arts-and-sciences/mathematics-and-statistics/undergraduate-programs/data-science-bs,2023-24 bulletin
+Portland State University,30.7001,5,Mth 261,Introduction to Linear Algebra,4,https://pdx-mobile.smartcatalogiq.com/2023-2024/bulletin/college-of-liberal-arts-and-sciences/mathematics-and-statistics/undergraduate-programs/data-science-bs,2023-24 bulletin
+Portland State University,30.7001,5,Mth 271,Mathematical Computing,4,https://pdx-mobile.smartcatalogiq.com/2023-2024/bulletin/college-of-liberal-arts-and-sciences/mathematics-and-statistics/undergraduate-programs/data-science-bs,2023-24 bulletin
+Portland State University,30.7001,5,Mth 343,Applied Linear Algebra,4,https://pdx-mobile.smartcatalogiq.com/2023-2024/bulletin/college-of-liberal-arts-and-sciences/mathematics-and-statistics/undergraduate-programs/data-science-bs,2023-24 bulletin
+Portland State University,30.7001,5,Mth 371,Large-Scale Data Algorithms,4,https://pdx-mobile.smartcatalogiq.com/2023-2024/bulletin/college-of-liberal-arts-and-sciences/mathematics-and-statistics/undergraduate-programs/data-science-bs,2023-24 bulletin
+Portland State University,30.7001,5,Stat 361,Introduction to Statistical Methods,4,https://pdx-mobile.smartcatalogiq.com/2023-2024/bulletin/college-of-liberal-arts-and-sciences/mathematics-and-statistics/undergraduate-programs/data-science-bs,2023-24 bulletin
+Portland State University,30.7001,5,Stat 363,Statistical Computing and Data Visualization in R,4,https://pdx-mobile.smartcatalogiq.com/2023-2024/bulletin/college-of-liberal-arts-and-sciences/mathematics-and-statistics/undergraduate-programs/data-science-bs,2023-24 bulletin
+Portland State University,30.7001,5,Stat 364,Modern Regression Analysis,4,https://pdx-mobile.smartcatalogiq.com/2023-2024/bulletin/college-of-liberal-arts-and-sciences/mathematics-and-statistics/undergraduate-programs/data-science-bs,2023-24 bulletin
+Portland State University,30.7001,5,Stat 387,Introduction to Statistical Learning,4,https://pdx-mobile.smartcatalogiq.com/2023-2024/bulletin/college-of-liberal-arts-and-sciences/mathematics-and-statistics/undergraduate-programs/data-science-bs,2023-24 bulletin
+Portland State University,30.7001,5,Stat 409,Data Science Practicum,3,https://pdx-mobile.smartcatalogiq.com/2023-2024/bulletin/college-of-liberal-arts-and-sciences/mathematics-and-statistics/undergraduate-programs/data-science-bs,2023-24 bulletin
+Portland State University,30.7001,5,CS 250,Discrete Structures I,4,https://pdx-mobile.smartcatalogiq.com/2023-2024/bulletin/college-of-liberal-arts-and-sciences/mathematics-and-statistics/undergraduate-programs/data-science-bs,2023-24 bulletin
+Portland State University,30.7001,5,CS 350,Algorithms and Complexity,4,https://pdx-mobile.smartcatalogiq.com/2023-2024/bulletin/college-of-liberal-arts-and-sciences/mathematics-and-statistics/undergraduate-programs/data-science-bs,2023-24 bulletin
+Portland State University,30.7001,5,CS 486,Introduction to Database Management Systems,4,https://pdx-mobile.smartcatalogiq.com/2023-2024/bulletin/college-of-liberal-arts-and-sciences/mathematics-and-statistics/undergraduate-programs/data-science-bs,2023-24 bulletin
+Howard University,30.7001,5,DATA 023,Foundational Python for Data Science,3,https://programs.howard.edu/data-science,web
+Howard University,30.7001,5,CSCI 100,Introduction to Computer Science,3,https://programs.howard.edu/data-science,web
+Howard University,30.7001,5,MATH 153,Data Wrangling and Engineering,3,https://programs.howard.edu/data-science,web
+Howard University,30.7001,5,MATH 156,Calculus I,3,https://programs.howard.edu/data-science,web
+Howard University,30.7001,5,MATH 157,Calculus II,3,https://programs.howard.edu/data-science,web
+Howard University,30.7001,5,MATH 189,Probability and Statistics I,3,https://programs.howard.edu/data-science,web
+Howard University,30.7001,5,MATH 190,Probability and Statistics II,3,https://programs.howard.edu/data-science,web
+Howard University,30.7001,5,MATH 152,Applied Statistics,3,https://programs.howard.edu/data-science,web
+Howard University,30.7001,5,MATH 177,Optimization Techniques,3,https://programs.howard.edu/data-science,web
+Howard University,30.7001,5,MATH 181,Discrete Structures,3,https://programs.howard.edu/data-science,web
+Howard University,30.7001,5,DATA 021,Computational Social Justice,3,https://programs.howard.edu/data-science,web
+Howard University,30.7001,5,MATH 163,Machine Learning,3,https://programs.howard.edu/data-science,web
+Howard University,30.7001,5,DATA 108,Internship Course,3,https://programs.howard.edu/data-science,web
+Purdue University-Main Campus,11.0102,5,CS 17600,Data Engineering in Python,3,https://www.cs.purdue.edu/undergraduate/curriculum/bachelor-ai.html,Fall 2026
+Purdue University-Main Campus,11.0102,5,PSY 12000,Elementary Psychology,3,https://www.cs.purdue.edu/undergraduate/curriculum/bachelor-ai.html,Fall 2026
+Purdue University-Main Campus,11.0102,5,CS 18000,Problem Solving and Object-Oriented Programming,4,https://www.cs.purdue.edu/undergraduate/curriculum/bachelor-ai.html,Fall 2026
+Purdue University-Main Campus,11.0102,5,CS 18200,Foundations of Computer Science,3,https://www.cs.purdue.edu/undergraduate/curriculum/bachelor-ai.html,Fall 2026
+Purdue University-Main Campus,11.0102,5,PSY 20000,Introduction to Cognitive Psychology,3,https://www.cs.purdue.edu/undergraduate/curriculum/bachelor-ai.html,Fall 2026
+Purdue University-Main Campus,11.0102,5,CS 24300,Artificial Intelligence Basics,3,https://www.cs.purdue.edu/undergraduate/curriculum/bachelor-ai.html,Fall 2026
+Purdue University-Main Campus,11.0102,5,MA 26100,Multivariate Calculus,4,https://www.cs.purdue.edu/undergraduate/curriculum/bachelor-ai.html,Fall 2026
+Purdue University-Main Campus,11.0102,5,PHIL 20800,Ethics of Data Science,3,https://www.cs.purdue.edu/undergraduate/curriculum/bachelor-ai.html,Fall 2026
+Purdue University-Main Campus,11.0102,5,CS 25300,Data Structures and Algorithms,3,https://www.cs.purdue.edu/undergraduate/curriculum/bachelor-ai.html,Fall 2026
+Purdue University-Main Campus,11.0102,5,MA 26500,Linear Algebra,3,https://www.cs.purdue.edu/undergraduate/curriculum/bachelor-ai.html,Fall 2026
+Purdue University-Main Campus,11.0102,5,MA 41600,Probability,3,https://www.cs.purdue.edu/undergraduate/curriculum/bachelor-ai.html,Fall 2026
+Purdue University-Main Campus,11.0102,5,PHIL 22100,Introduction to Philosophy of Science,3,https://www.cs.purdue.edu/undergraduate/curriculum/bachelor-ai.html,Fall 2026
+Purdue University-Main Campus,11.0102,5,CS 37300,Data Mining and Machine Learning,3,https://www.cs.purdue.edu/undergraduate/curriculum/bachelor-ai.html,Fall 2026
+Purdue University-Main Campus,11.0102,5,CS 38100,Introduction to the Analysis of Algorithms,3,https://www.cs.purdue.edu/undergraduate/curriculum/bachelor-ai.html,Fall 2026
+Purdue University-Main Campus,11.0102,5,CS 47100,Introduction to Artificial Intelligence,3,https://www.cs.purdue.edu/undergraduate/curriculum/bachelor-ai.html,Fall 2026
+Purdue University-Main Campus,11.0102,5,STAT 35000,Introduction to Statistics,3,https://www.cs.purdue.edu/undergraduate/curriculum/bachelor-ai.html,Fall 2026
+Purdue University-Main Campus,11.0102,5,CS 47600,Artificial Intelligence Capstone,3,https://www.cs.purdue.edu/undergraduate/curriculum/bachelor-ai.html,Fall 2026
+Ithaca College,11.0102,5,MATH 11100,Calculus I,4,https://catalog.ithaca.edu/undergrad/schools/school-humanities-sciences/department-computer-science/artificial-intelligence-major-bs/,web
+Ithaca College,11.0102,5,MATH 18700,Introduction to Applied Linear Algebra,4,https://catalog.ithaca.edu/undergrad/schools/school-humanities-sciences/department-computer-science/artificial-intelligence-major-bs/,web
+Ithaca College,11.0102,5,MATH 24800,Statistical Methods for Data Analysis,4,https://catalog.ithaca.edu/undergrad/schools/school-humanities-sciences/department-computer-science/artificial-intelligence-major-bs/,web
+Ithaca College,11.0102,5,COMP 21500,Discrete Structures,4,https://catalog.ithaca.edu/undergrad/schools/school-humanities-sciences/department-computer-science/artificial-intelligence-major-bs/,web
+Ithaca College,11.0102,5,COMP 17100,Computer Programming I,4,https://catalog.ithaca.edu/undergrad/schools/school-humanities-sciences/department-computer-science/artificial-intelligence-major-bs/,web
+Ithaca College,11.0102,5,COMP 17200,Computer Programming II,4,https://catalog.ithaca.edu/undergrad/schools/school-humanities-sciences/department-computer-science/artificial-intelligence-major-bs/,web
+Ithaca College,11.0102,5,COMP 22000,Data Structures,4,https://catalog.ithaca.edu/undergrad/schools/school-humanities-sciences/department-computer-science/artificial-intelligence-major-bs/,web
+Ithaca College,11.0102,5,COMP 11000,Working with Structured Data,3,https://catalog.ithaca.edu/undergrad/schools/school-humanities-sciences/department-computer-science/artificial-intelligence-major-bs/,web
+Ithaca College,11.0102,5,COMP 11200,Scripting in Spreadsheets,1,https://catalog.ithaca.edu/undergrad/schools/school-humanities-sciences/department-computer-science/artificial-intelligence-major-bs/,web
+Ithaca College,11.0102,5,COMP 27500,Relational Database Systems,4,https://catalog.ithaca.edu/undergrad/schools/school-humanities-sciences/department-computer-science/artificial-intelligence-major-bs/,web
+Ithaca College,11.0102,5,COMP 35600,Machine Learning,4,https://catalog.ithaca.edu/undergrad/schools/school-humanities-sciences/department-computer-science/artificial-intelligence-major-bs/,web
+Ithaca College,11.0102,5,COMP 37500,Database Systems,4,https://catalog.ithaca.edu/undergrad/schools/school-humanities-sciences/department-computer-science/artificial-intelligence-major-bs/,web
+Ithaca College,11.0102,5,COMP 45600,Topics in Machine Learning,4,https://catalog.ithaca.edu/undergrad/schools/school-humanities-sciences/department-computer-science/artificial-intelligence-major-bs/,web
+Illinois Institute of Technology,11.0102,5,CS 100,Introduction to the Profession,2,https://catalog.iit.edu/undergraduate/colleges/computing/computer-science/bs-artificial-intelligence/,web
+Illinois Institute of Technology,11.0102,5,CS 115,Object-Oriented Programming I,2,https://catalog.iit.edu/undergraduate/colleges/computing/computer-science/bs-artificial-intelligence/,web
+Illinois Institute of Technology,11.0102,5,CS 116,Object-Oriented Programming II,2,https://catalog.iit.edu/undergraduate/colleges/computing/computer-science/bs-artificial-intelligence/,web
+Illinois Institute of Technology,11.0102,5,CS 330,Discrete Structures,3,https://catalog.iit.edu/undergraduate/colleges/computing/computer-science/bs-artificial-intelligence/,web
+Illinois Institute of Technology,11.0102,5,CS 331,Data Structures and Algorithms,3,https://catalog.iit.edu/undergraduate/colleges/computing/computer-science/bs-artificial-intelligence/,web
+Illinois Institute of Technology,11.0102,5,CS 340,Programming Paradigms and Patterns,3,https://catalog.iit.edu/undergraduate/colleges/computing/computer-science/bs-artificial-intelligence/,web
+Illinois Institute of Technology,11.0102,5,CS 422,Data Mining,3,https://catalog.iit.edu/undergraduate/colleges/computing/computer-science/bs-artificial-intelligence/,web
+Illinois Institute of Technology,11.0102,5,CS 425,Database Organization,3,https://catalog.iit.edu/undergraduate/colleges/computing/computer-science/bs-artificial-intelligence/,web
+Illinois Institute of Technology,11.0102,5,CS 430,Introduction to Algorithms,3,https://catalog.iit.edu/undergraduate/colleges/computing/computer-science/bs-artificial-intelligence/,web
+Illinois Institute of Technology,11.0102,5,CS 480,Introduction to Artificial Intelligence,3,https://catalog.iit.edu/undergraduate/colleges/computing/computer-science/bs-artificial-intelligence/,web
+Illinois Institute of Technology,11.0102,5,CS 481,Artificial Intelligence Language Understanding,3,https://catalog.iit.edu/undergraduate/colleges/computing/computer-science/bs-artificial-intelligence/,web
+Illinois Institute of Technology,11.0102,5,CS 485,Computers and Society,3,https://catalog.iit.edu/undergraduate/colleges/computing/computer-science/bs-artificial-intelligence/,web
+Illinois Institute of Technology,11.0102,5,CS 487,Software Engineering I,3,https://catalog.iit.edu/undergraduate/colleges/computing/computer-science/bs-artificial-intelligence/,web
+Illinois Institute of Technology,11.0102,5,MATH 151,Calculus I,5,https://catalog.iit.edu/undergraduate/colleges/computing/computer-science/bs-artificial-intelligence/,web
+Illinois Institute of Technology,11.0102,5,MATH 152,Calculus II,5,https://catalog.iit.edu/undergraduate/colleges/computing/computer-science/bs-artificial-intelligence/,web
+Illinois Institute of Technology,11.0102,5,MATH 251,Multivariate and Vector Calculus,4,https://catalog.iit.edu/undergraduate/colleges/computing/computer-science/bs-artificial-intelligence/,web
+Illinois Institute of Technology,11.0102,5,MATH 332,Linear Algebra: Theory and Applications,3,https://catalog.iit.edu/undergraduate/colleges/computing/computer-science/bs-artificial-intelligence/,web
+Illinois Institute of Technology,11.0102,5,MATH 474,Probability and Statistics,3,https://catalog.iit.edu/undergraduate/colleges/computing/computer-science/bs-artificial-intelligence/,web
+Illinois Institute of Technology,11.0102,5,MATH 476,Statistics,3,https://catalog.iit.edu/undergraduate/colleges/computing/computer-science/bs-artificial-intelligence/,web
+Bemidji State University,27.0501,5,CS 2321,Computer Science I,4,https://www.bemidjistate.edu/academics/catalog/20265/programs/bs__stat,2025-26
+Bemidji State University,27.0501,5,CS 2322,Computer Science II,4,https://www.bemidjistate.edu/academics/catalog/20265/programs/bs__stat,2025-26
+Bemidji State University,27.0501,5,CS 3507,Introduction to Databases,3,https://www.bemidjistate.edu/academics/catalog/20265/programs/bs__stat,2025-26
+Bemidji State University,27.0501,5,MATH 2471,Calculus I,5,https://www.bemidjistate.edu/academics/catalog/20265/programs/bs__stat,2025-26
+Bemidji State University,27.0501,5,MATH 2472,Calculus II,5,https://www.bemidjistate.edu/academics/catalog/20265/programs/bs__stat,2025-26
+Bemidji State University,27.0501,5,MATH 2480,Multivariable Calculus,4,https://www.bemidjistate.edu/academics/catalog/20265/programs/bs__stat,2025-26
+Bemidji State University,27.0501,5,MATH 3310,Linear Algebra,4,https://www.bemidjistate.edu/academics/catalog/20265/programs/bs__stat,2025-26
+Bemidji State University,27.0501,5,STAT 2610,Applied Statistics,4,https://www.bemidjistate.edu/academics/catalog/20265/programs/bs__stat,2025-26
+Bemidji State University,27.0501,5,STAT 3620,Applied Regression Analysis,3,https://www.bemidjistate.edu/academics/catalog/20265/programs/bs__stat,2025-26
+Bemidji State University,27.0501,5,STAT 3631,Probability and Statistics I,4,https://www.bemidjistate.edu/academics/catalog/20265/programs/bs__stat,2025-26
+Bemidji State University,27.0501,5,STAT 3632,Probability and Statistics II,3,https://www.bemidjistate.edu/academics/catalog/20265/programs/bs__stat,2025-26
+Bemidji State University,27.0501,5,STAT 4000,Capstone in Statistics,3,https://www.bemidjistate.edu/academics/catalog/20265/programs/bs__stat,2025-26
+West Liberty University,30.7001,5,MATH 160,Introduction to Statistics,3,https://westliberty.smartcatalogiq.com/en/2025-2026/undergraduate-catalog/college-of-sciences/data-science-bs,2025-26
+West Liberty University,30.7001,5,MATH 175,Introduction to Programming in Python,3,https://westliberty.smartcatalogiq.com/en/2025-2026/undergraduate-catalog/college-of-sciences/data-science-bs,2025-26
+West Liberty University,30.7001,5,MATH 205,Foundations of Data Science,3,https://westliberty.smartcatalogiq.com/en/2025-2026/undergraduate-catalog/college-of-sciences/data-science-bs,2025-26
+West Liberty University,30.7001,5,MATH 210,Calculus & Analytic Geometry I,4,https://westliberty.smartcatalogiq.com/en/2025-2026/undergraduate-catalog/college-of-sciences/data-science-bs,2025-26
+West Liberty University,30.7001,5,MATH 220,Data Structures and Algorithms,3,https://westliberty.smartcatalogiq.com/en/2025-2026/undergraduate-catalog/college-of-sciences/data-science-bs,2025-26
+West Liberty University,30.7001,5,MATH 341,Linear Algebra,3,https://westliberty.smartcatalogiq.com/en/2025-2026/undergraduate-catalog/college-of-sciences/data-science-bs,2025-26
+West Liberty University,30.7001,5,MATH 374,Discrete Mathematics,3,https://westliberty.smartcatalogiq.com/en/2025-2026/undergraduate-catalog/college-of-sciences/data-science-bs,2025-26
+West Liberty University,30.7001,5,MATH 470,Computational Statistics,3,https://westliberty.smartcatalogiq.com/en/2025-2026/undergraduate-catalog/college-of-sciences/data-science-bs,2025-26
+West Liberty University,30.7001,5,MATH 473,Machine Learning I,4,https://westliberty.smartcatalogiq.com/en/2025-2026/undergraduate-catalog/college-of-sciences/data-science-bs,2025-26
+West Liberty University,30.7001,5,MATH 482,Data Science Capstone,2,https://westliberty.smartcatalogiq.com/en/2025-2026/undergraduate-catalog/college-of-sciences/data-science-bs,2025-26
+West Liberty University,30.7001,5,CIS 486,Data Analytics I,3,https://westliberty.smartcatalogiq.com/en/2025-2026/undergraduate-catalog/college-of-sciences/data-science-bs,2025-26
+West Liberty University,30.7001,5,CIS 487,Data Analytics II,3,https://westliberty.smartcatalogiq.com/en/2025-2026/undergraduate-catalog/college-of-sciences/data-science-bs,2025-26
+University of New Hampshire-Main Campus,27.0599,5,MATH 425,Calculus I,4,https://catalog.unh.edu/undergraduate/engineering-physical-sciences/programs-study/mathematics-statistics/statistics-major-bs/,web
+University of New Hampshire-Main Campus,27.0599,5,MATH 426,Calculus II,4,https://catalog.unh.edu/undergraduate/engineering-physical-sciences/programs-study/mathematics-statistics/statistics-major-bs/,web
+University of New Hampshire-Main Campus,27.0599,5,MATH 445,Mathematics and Applications with MATLAB,4,https://catalog.unh.edu/undergraduate/engineering-physical-sciences/programs-study/mathematics-statistics/statistics-major-bs/,web
+University of New Hampshire-Main Campus,27.0599,5,MATH 527,Differential Equations with Linear Algebra 1,4,https://catalog.unh.edu/undergraduate/engineering-physical-sciences/programs-study/mathematics-statistics/statistics-major-bs/,web
+University of New Hampshire-Main Campus,27.0599,5,MATH 528,Multidimensional Calculus 1,4,https://catalog.unh.edu/undergraduate/engineering-physical-sciences/programs-study/mathematics-statistics/statistics-major-bs/,web
+University of New Hampshire-Main Campus,27.0599,5,MATH 531,Mathematical Proof,4,https://catalog.unh.edu/undergraduate/engineering-physical-sciences/programs-study/mathematics-statistics/statistics-major-bs/,web
+University of New Hampshire-Main Campus,27.0599,5,MATH 539,Introduction to Statistical Analysis,4,https://catalog.unh.edu/undergraduate/engineering-physical-sciences/programs-study/mathematics-statistics/statistics-major-bs/,web
+University of New Hampshire-Main Campus,27.0599,5,MATH 645,Linear Algebra for Applications 1,4,https://catalog.unh.edu/undergraduate/engineering-physical-sciences/programs-study/mathematics-statistics/statistics-major-bs/,web
+University of New Hampshire-Main Campus,27.0599,5,MATH 739,Applied Regression Analysis,4,https://catalog.unh.edu/undergraduate/engineering-physical-sciences/programs-study/mathematics-statistics/statistics-major-bs/,web
+University of New Hampshire-Main Campus,27.0599,5,MATH 755,Probability with Applications,4,https://catalog.unh.edu/undergraduate/engineering-physical-sciences/programs-study/mathematics-statistics/statistics-major-bs/,web
+University of New Hampshire-Main Campus,27.0599,5,MATH 756,Principles of Statistical Inference,4,https://catalog.unh.edu/undergraduate/engineering-physical-sciences/programs-study/mathematics-statistics/statistics-major-bs/,web
+Baylor University,27.0501,5,STA 3381,Probability and Statistics,3,https://catalog.baylor.edu/undergraduate/college-arts-sciences/academic-departments/statistical-science/statistics-bs/,from search snippet; credits assumed
+Baylor University,27.0501,5,STA 3386,Regression Analysis,3,https://catalog.baylor.edu/undergraduate/college-arts-sciences/academic-departments/statistical-science/statistics-bs/,from search snippet; credits assumed
+Baylor University,27.0501,5,STA 4373,Computational Methods in Statistics,3,https://catalog.baylor.edu/undergraduate/college-arts-sciences/academic-departments/statistical-science/statistics-bs/,from search snippet; credits assumed
+Baylor University,27.0501,5,STA 4385,Mathematical Statistics I,3,https://catalog.baylor.edu/undergraduate/college-arts-sciences/academic-departments/statistical-science/statistics-bs/,from search snippet; credits assumed
+Baylor University,27.0501,5,STA 4386,Mathematical Statistics II,3,https://catalog.baylor.edu/undergraduate/college-arts-sciences/academic-departments/statistical-science/statistics-bs/,from search snippet; credits assumed
+Baylor University,27.0501,5,STA 43C9,Capstone Statistics Course,3,https://catalog.baylor.edu/undergraduate/college-arts-sciences/academic-departments/statistical-science/statistics-bs/,from search snippet; credits assumed
+Baylor University,27.0501,5,MTH 1321,Calculus I,3,https://catalog.baylor.edu/undergraduate/college-arts-sciences/academic-departments/statistical-science/statistics-bs/,from search snippet; credits assumed
+Baylor University,27.0501,5,MTH 1322,Calculus II,3,https://catalog.baylor.edu/undergraduate/college-arts-sciences/academic-departments/statistical-science/statistics-bs/,from search snippet; credits assumed
+Baylor University,27.0501,5,MTH 2311,Linear Algebra,3,https://catalog.baylor.edu/undergraduate/college-arts-sciences/academic-departments/statistical-science/statistics-bs/,from search snippet; credits assumed

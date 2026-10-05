@@ -1,4 +1,4 @@
-"""Skill-mismatch metrics (BRD §5.4).
+"""Skill-mismatch metrics (BRD §5.4). posting_skills must hold unique (posting_id, skill) pairs.
 
 D(s)  demand share   = postings requiring s / postings in filter
 S(s)  supply coverage= graduates of programs that require a course mapped to s / graduates in filter
@@ -12,8 +12,8 @@ def demand_share(postings: pd.DataFrame, posting_skills: pd.DataFrame, skills) -
     n = postings.posting_id.nunique()
     if n == 0:
         return pd.Series(0.0, index=list(skills))
-    ps = posting_skills[posting_skills.posting_id.isin(postings.posting_id)].drop_duplicates()
-    return (ps.groupby("skill").posting_id.nunique() / n).reindex(list(skills), fill_value=0.0)
+    ps = posting_skills[posting_skills.posting_id.isin(postings.posting_id)]  # (posting_id, skill) pairs are unique
+    return (ps.groupby("skill", observed=True).posting_id.size() / n).reindex(list(skills), fill_value=0.0)
 
 
 def supply_coverage(program_ids, graduates: pd.DataFrame, courses: pd.DataFrame, skills) -> pd.Series:

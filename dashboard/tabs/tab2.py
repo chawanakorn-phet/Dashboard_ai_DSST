@@ -3,7 +3,7 @@ import plotly.graph_objects as go
 from dash import Input, Output, html
 
 from .. import data, filters
-from ..config import LEVELS, SKILL_TO_CATEGORY
+from ..config import LEVELS
 from ..ui import card, colors_for, empty, graph, kpis, style
 
 FIG_NAMES = ["t2-postings", "t2-skills", "t2-companies", "t2-salary"]
@@ -14,15 +14,16 @@ def layout():
     return html.Div([
         html.Div(id="t2-kpis"),
         html.Div([
-            card("ปริมาณตำแหน่งว่าง (ประกาศงาน) ตามปี", graph("t2-postings"), "นับจากประกาศงาน ไม่ใช่จำนวนที่จ้างจริง"),
+            card("ปริมาณตำแหน่งว่าง (ประกาศงาน) รายเดือน ปี 2023", graph("t2-postings"), "snapshot ปี 2023 · นับจากประกาศงาน ไม่ใช่จำนวนที่จ้างจริง · ไม่ผูกกับตัวกรองช่วงปี"),
             card(f"ทักษะที่ต้องการ Top {TOP_N} (% ของประกาศ)", graph("t2-skills"), "คลิกทักษะเพื่อกรอง"),
             card(f"บริษัทที่รับ Top {TOP_N} (จำนวนประกาศ)", graph("t2-companies"), "คลิกบริษัทเพื่อกรอง"),
-            card("เงินเดือนตามระดับงาน (USD/ปี)", graph("t2-salary"), "คลิก box เพื่อเลือกระดับ"),
+            card("เงินเดือนตามระดับงาน (USD/ปี)", graph("t2-salary"), "เฉพาะประกาศที่ระบุเงินเดือน (ส่วนใหญ่สหรัฐฯ) · ระดับจัดจากชื่อตำแหน่ง · คลิก box เพื่อเลือกระดับ"),
         ], className="grid2"),
     ])
 
 
 def build(d: data.Data, fields, years, countries, sel):
+    years = (0, 9999)  # postings are a single-year snapshot; the year slider applies to graduates only
     fields = filters.effective_fields(d.programs, fields, sel)
 
     def posts(exclude=()):
@@ -33,21 +34,21 @@ def build(d: data.Data, fields, years, countries, sel):
     if p.empty:
         f1 = empty()
     else:
-        g = p.groupby(["year", "level"]).size().unstack(fill_value=0).reindex(columns=LEVELS, fill_value=0)
+        g = p.groupby(["month", "level"]).size().unstack(fill_value=0).reindex(columns=LEVELS, fill_value=0)
         f1 = go.Figure()
         for lv in LEVELS:
             op = 1 if not sel.get("level") or sel["level"] == lv else 0.25
             f1.add_bar(x=g.index, y=g[lv], name=lv, opacity=op)
-        f1.update_layout(barmode="stack", xaxis=dict(dtick=1), yaxis_title="จำนวนประกาศ")
+        f1.update_layout(barmode="stack", xaxis=dict(dtick=1, title="เดือน (2023)"), yaxis_title="จำนวนประกาศ")
         style(f1)
 
     # C2 top skills (ignores skill selection so other skills stay clickable)
     p = posts(("skill",))
-    ps = d.posting_skills[d.posting_skills.posting_id.isin(p.posting_id)].drop_duplicates()
+    ps = d.posting_skills[d.posting_skills.posting_id.isin(p.posting_id)]
     if p.empty or ps.empty:
         f2 = empty()
     else:
-        s = (ps.groupby("skill").posting_id.nunique() / len(p) * 100).sort_values().tail(TOP_N)
+        s = (ps.groupby("skill", observed=True).size() / len(p) * 100).sort_values().tail(TOP_N)
         f2 = go.Figure(go.Bar(y=s.index, x=s.values, orientation="h", marker_color=colors_for(list(s.index), sel.get("skill")),
                               hovertemplate="%{y}: %{x:.1f}% ของประกาศ<extra></extra>"))
         f2.update_layout(xaxis_title="% ของประกาศ", yaxis=dict(dtick=1))

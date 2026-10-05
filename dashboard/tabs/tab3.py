@@ -16,7 +16,7 @@ def layout():
         html.Div(id="t3-kpis"),
         html.Div([
             card("Supply vs Demand ต่อทักษะ", graph("t3-gap", 440),
-                 "Demand = % ประกาศที่ต้องการ · Supply = % บัณฑิตที่หลักสูตรมีวิชาบังคับในทักษะนั้น · คลิกเพื่อเลือกทักษะ"),
+                 "Demand = % ประกาศ (2023) ที่ต้องการ · Supply = % บัณฑิตที่หลักสูตรมีวิชาบังคับในทักษะนั้น (เฉพาะหลักสูตรที่มีข้อมูลรายวิชา) · คลิกเพื่อเลือกทักษะ"),
             card("Gap (Demand − Supply) ทักษะ × ระดับงาน", graph("t3-heat", 440), "แดง = ขาดแคลน · น้ำเงิน = ผลิตเกิน"),
             card("Quadrant: ความครอบคลุมในหลักสูตร vs ความต้องการตลาด", graph("t3-quad"), "เส้นแบ่ง = ค่ามัธยฐาน"),
             card("Mismatch score รายหลักสูตร", graph("t3-programs"),
@@ -27,11 +27,16 @@ def layout():
 
 
 def build(d: data.Data, fields, years, countries, sel):
+    py = years              # graduate-weighting years
+    years = (0, 9999)       # postings are a single-year snapshot
     pfields = list(fields)
     efields = filters.effective_fields(d.programs, fields, sel)
     p_sup = filters.select_programs(d.programs, d.courses, pfields, sel, exclude=("skill",))
-    g_sup = d.graduates[d.graduates.year.between(*years)]
+    with_courses = set(d.courses.program_id)
+    p_sup = p_sup[p_sup.program_id.isin(with_courses)]  # supply is only known for programs with curriculum data
+    g_sup = d.graduates[d.graduates.year.between(*py)]
     p_all = filters.select_programs(d.programs, d.courses, pfields, sel, exclude=("skill", "program"))
+    p_all = p_all[p_all.program_id.isin(with_courses)]
 
     def posts(exclude=()):
         return filters.select_postings(d.postings, d.posting_skills, efields, years, countries, sel, exclude)
@@ -93,7 +98,7 @@ def build(d: data.Data, fields, years, countries, sel):
     # table: top shortages with related courses
     top = gt.sort_values("gap", ascending=False).head(8)
     cc = d.courses[d.courses.program_id.isin(p_sup.program_id)]
-    npost = d.posting_skills[d.posting_skills.posting_id.isin(demand_posts.posting_id)].drop_duplicates().groupby("skill").size()
+    npost = d.posting_skills[d.posting_skills.posting_id.isin(demand_posts.posting_id)].groupby("skill", observed=True).size()
     rows = []
     for _, r in top.iterrows():
         rel = cc[cc.skill == r.skill].course.drop_duplicates().head(3).tolist()

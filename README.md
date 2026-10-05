@@ -24,32 +24,31 @@ Dashboard วิเคราะห์อุปทาน–อุปสงค์�
 | [`docs/handoff.html`](docs/handoff.html) | หน้า handoff แบบแก้ไขได้ |
 
 ## เทคโนโลยี
-Python 3.11+, Dash (Flask + Plotly), pandas, DuckDB (ใช้ภายหลัง), pytest
+Python 3.11+, Dash (Flask + Plotly), pandas, pytest
 
 ## โครงสร้าง
 ```
-app.py                 Dash entrypoint (3 tabs)
-dashboard/
-  config.py            ระดับงาน, หมวดทักษะ, สี
-  data.py              โหลดข้อมูล (sample หรือ processed)
-  filters.py           apply_filters — ตรรกะ cross-filter ที่ทดสอบได้
-  metrics.py           Demand / Supply / Gap / Mismatch score
-  tabs/{tab1,tab2,tab3}.py
-etl/make_sample_data.py  สร้างข้อมูลตัวอย่าง (SYNTHETIC)
+app.py                  Dash entrypoint (3 tabs)
+dashboard/              config, data loader, filters (cross-filter), metrics (Gap/Mismatch), ui, tabs/
+etl/download_raw.py     ดาวน์โหลดข้อมูลเปิด (~290 MB) -> data/raw/
+etl/build_real_data.py  สร้างตาราง -> data/processed/
+etl/skills.py           กฎจับคู่ชื่อวิชา / ทักษะในประกาศงาน -> taxonomy กลาง
+data/curated/           รายวิชาบังคับ 9 หลักสูตร (รวบรวมเอง พร้อม URL ต้นทาง)
 tests/
 ```
 
 ## เริ่มใช้งาน
 ```bash
 pip install -r requirements.txt
-python etl/make_sample_data.py   # สร้าง data/sample/*.csv
+python etl/download_raw.py       # ครั้งแรกเท่านั้น
+python etl/build_real_data.py    # สร้าง data/processed/*.csv
 python app.py                    # เปิด http://127.0.0.1:8050
 pytest
 ```
 
-## หมายเหตุสำคัญเรื่องข้อมูล
-ข้อมูลที่ dashboard แสดงตอนนี้เป็น **ข้อมูลตัวอย่าง (synthetic)** เพื่อพัฒนา UI และตรรกะ — ไม่ใช่ตัวเลขจริง และมีป้ายเตือนบนหน้าจอ
-ช่องว่างข้อมูลจริงของไทย (หลักสูตร รายวิชา ค่าเทอม การมีงานทำปี 1–3) ดู BRD §4.2
+## ข้อมูล
+ใช้ **ข้อมูลจริงเปิด (สหรัฐฯ เป็นหลัก)**: NCES IPEDS, College Scorecard, Luke Barousse `data_jobs` (Apache-2.0) และรายวิชาที่รวบรวมเอง — รายละเอียด license ลิงก์ และข้อจำกัดอยู่ใน [`docs/datasets/06_real_data_used.md`](docs/datasets/06_real_data_used.md)
+ข้อมูลไทยยังไม่ได้ใช้ (ไม่จำเป็นตามที่เจ้าของโปรเจกต์ระบุ) — แหล่งไทยที่รวบรวมไว้ดู `docs/datasets/01–05`
 
 ## License ข้อมูล
 แต่ละแหล่งมี license ต่างกัน (CC0, CC BY, OGL, ODbL ฯลฯ) ดูรายละเอียดใน `docs/datasets/`

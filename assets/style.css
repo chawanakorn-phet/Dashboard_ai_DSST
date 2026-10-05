@@ -16,3 +16,4 @@ button{border:1px solid #2a5d9f;background:#fff;color:#2a5d9f;border-radius:6px;
 .kv{font-size:22px;font-weight:600}.kk{font-size:12px;color:#666}
 table{width:100%;border-collapse:collapse;font-size:13px}th,td{border-bottom:1px solid #eee;padding:4px 8px;text-align:left}
 @media(max-width:600px){.grid2{grid-template-columns:1fr}}
+.note-bar{background:#eaf2fb;border:1px solid #b9d0ea;border-radius:6px;padding:6px 10px;font-size:12px;margin-bottom:8px}
