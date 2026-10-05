@@ -17,16 +17,31 @@ FILES = {
 
 def main():
     RAW.mkdir(parents=True, exist_ok=True)
+    failed = []
     for name, url in FILES.items():
         dest = RAW / name
         if dest.exists():
             print("have", name)
             continue
         print("get ", name, flush=True)
-        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-        with urllib.request.urlopen(req, timeout=120) as r, open(dest, "wb") as f:
-            while chunk := r.read(1 << 20):
-                f.write(chunk)
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(req, timeout=120) as r, open(dest, "wb") as f:
+                while chunk := r.read(1 << 20):
+                    f.write(chunk)
+        except Exception as e:  # keep going: one blocked host should not stop the others
+            dest.unlink(missing_ok=True)
+            failed.append((name, url, e))
+            print(f"  FAILED: {e}")
+    if failed:
+        print("
+Could not download (open the URL in a browser and save into data/raw/ if needed):", file=sys.stderr)
+        for name, url, _ in failed:
+            print(f"  {name}
+    {url}", file=sys.stderr)
+        if all(n.startswith("Most-Recent") for n, _, _ in failed):
+            print("Only the College Scorecard file failed - this is OK: the ETL uses data/curated/outcomes_scorecard.csv instead.", file=sys.stderr)
+        sys.exit(1)
     print("done", file=sys.stderr)
 
 

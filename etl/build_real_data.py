@@ -89,7 +89,12 @@ def build_outcomes(programs, g):
     """College Scorecard field-of-study earnings. Published horizons in this release: 1, 3, 4, 5 years after completion
     (no 2-year horizon). "Employed" = working and not enrolled (WNE) - the not-working count is mostly suppressed, so
     we report counts + median earnings, NOT an employment rate."""
-    f = next(RAW.glob("Most-Recent-Cohorts-Field-of-Study_*.zip"))
+    cache = CUR / "outcomes_scorecard.csv"
+    zips = list(RAW.glob("Most-Recent-Cohorts-Field-of-Study_*.zip"))
+    if not zips:  # Scorecard host blocks some cloud IPs (HTTP 403) - fall back to the committed derived table
+        print(f"WARNING: Scorecard zip not found in {RAW}; using cached {cache.name}")
+        return pd.read_csv(cache)
+    f = zips[0]
     years = (1, 3, 4, 5)
     cols = ["UNITID", "CIPCODE", "CREDLEV"] + [f"EARN_COUNT_WNE_{y}YR" for y in years] +            [f"EARN_MDN_{y}YR" for y in (1, 4, 5)] + ["EARN_NE_MDN_3YR"]
     z = zipfile.ZipFile(f)
@@ -112,7 +117,9 @@ def build_outcomes(programs, g):
     key = programs.merge(tot, left_on="program_id", right_index=True)
     key = key.sort_values("tot", ascending=False).drop_duplicates(["UNITID", "field", "level"])[["program_id", "UNITID", "field", "level"]]
     o = o.merge(key, on=["UNITID", "field", "level"])
-    return o[["program_id", "years_after", "n_employed", "median_earnings"]]
+    o = o[["program_id", "years_after", "n_employed", "median_earnings"]]
+    o.to_csv(cache, index=False)  # small derived cache, committed so cloud environments without access still work
+    return o
 
 
 def build_courses(programs):
